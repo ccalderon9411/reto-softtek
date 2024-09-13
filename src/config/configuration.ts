@@ -60,6 +60,25 @@ export default registerAs(
         timeout: 3000,
         healthPath: process.env.RICK_AND_MORTY_API_URL_LIVENESS,
       },
+      starWarsAPI: {
+        url: process.env.STAR_WARS_API_URL,
+        timeout: 3000,
+        healthPath: process.env.STAR_WARS_API_URL_LIVENNESS,
+      },
+    },
+    dynamodb: {
+      local: process.env.NODE_ENV !== 'production' || false,
+      logger: process.env.NODE_ENV !== 'production' || false,
+      aws: {
+        accessKeyId: `${process.env.AWS_ACCESS_KEY_ID}`,
+        secretAccessKey: `${process.env.AWS_SECRET_ACCESS_KEY}`,
+        region: `${process.env.AWS_REGION}`,
+      },
+      table: {
+        create: process.env.NODE_ENV !== 'production' || false,
+        prefix: `${PACKAGE_JSON.name}-`,
+        suffix: '-table',
+      },
     },
   }),
 );

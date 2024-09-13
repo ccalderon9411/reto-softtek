@@ -10,14 +10,4 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-
-  @Get('test-env')
-  getTestEnv(): string {
-    return this.appService.getTestEnv();
-  }
-
-  @Get('my-util')
-  getMyUtil() {
-    return this.appService.getMyCustomUtil();
-  }
 }

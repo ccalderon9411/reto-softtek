@@ -11,13 +11,14 @@ import {
 import { HttpClientInterceptor, HttpClientModule } from '@tresdoce-nestjs-toolkit/http-client';
 
 import { UtilsModule } from './utils/utils.module';
-import { UsersModule } from './users/users.module';
-import { CharactersModule } from './characters/characters.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 import { getEnvFilePath, config, validationSchema } from './config';
+import { StarwarsModule } from './starwars/starwars.module';
+import { PersonasModule } from './personas/personas.module';
+import { DynamooseModule } from '@tresdoce-nestjs-toolkit/dynamoose';
 
 @Module({
   imports: [
@@ -33,8 +34,9 @@ import { getEnvFilePath, config, validationSchema } from './config';
     TracingModule,
     HttpClientModule,
     UtilsModule,
-    CharactersModule,
-    UsersModule,
+    StarwarsModule,
+    PersonasModule,
+    DynamooseModule,
   ],
   controllers: [AppController],
   providers: [
