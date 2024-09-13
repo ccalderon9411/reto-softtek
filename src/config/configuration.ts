@@ -1,4 +1,4 @@
-import { getSkipHealthChecks, Typings } from '@tresdoce-nestjs-toolkit/paas';
+import { getSkipHealthChecks, Typings } from '@tresdoce-nestjs-toolkit/core';
 import { registerAs } from '@nestjs/config';
 
 import * as PACKAGE_JSON from '../../package.json';
@@ -37,29 +37,10 @@ export default registerAs(
       path: process.env.SWAGGER_PATH || 'docs',
       enabled: process.env.SWAGGER_ENABLED.toLowerCase() === 'true',
     },
-    tracing: {
-      resourceAttributes: {
-        serviceName: `${PACKAGE_JSON.name}`,
-        version: PACKAGE_JSON.version,
-        'service.namespace': `${process.env.API_PREFIX}`,
-        'deployment.environment': process.env.APP_STAGE,
-      },
-      exporter: {
-        url: process.env.TRACING_ENDPOINT,
-        headers: {
-          Authorization: `${process.env.TRACING_AUTH_TOKEN}`,
-        },
-      },
-    },
     params: {
       testEnv: process.env.TEST_KEY,
     },
     services: {
-      rickAndMortyAPI: {
-        url: process.env.RICK_AND_MORTY_API_URL,
-        timeout: 3000,
-        healthPath: process.env.RICK_AND_MORTY_API_URL_LIVENESS,
-      },
       starWarsAPI: {
         url: process.env.STAR_WARS_API_URL,
         timeout: 3000,

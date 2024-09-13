@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { validateSchemaForApp } from '@tresdoce-nestjs-toolkit/paas';
+import { validateSchemaForApp } from '@tresdoce-nestjs-toolkit/core';
 
 export const validationSchema = validateSchemaForApp({
   TEST_KEY: Joi.string().required(),

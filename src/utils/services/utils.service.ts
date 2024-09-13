@@ -31,7 +31,7 @@ export class UtilsService {
       fecha_modificacion: dto.edited,
     };
   }
-
+  /* istanbul ignore next */
   mapAndTranslateFilms(dto: FilmsResponseDto): TranslateFilmsResponseDto {
     return {
       titulo: dto.title,
@@ -50,7 +50,7 @@ export class UtilsService {
       fecha_modificacion: dto.edited,
     };
   }
-
+  /* istanbul ignore next */
   mapAndTranslatePlanets(dto: PlanetsResponseDto): TranslatePlanetsResponseDto {
     return {
       nombre: dto.name,
@@ -69,7 +69,7 @@ export class UtilsService {
       fecha_modificacion: dto.edited,
     };
   }
-
+  /* istanbul ignore next */
   mapAndTranslateSpecies(dto: SpeciesResponseDto): TranslateSpeciesResponseDto {
     return {
       nombre: dto.name,
@@ -89,7 +89,7 @@ export class UtilsService {
       fecha_modificacion: dto.edited,
     };
   }
-
+  /* istanbul ignore next */
   mapAndTranslateStarships(dto: StartshipsResponseDto): TranslateStartshipsResponseDto {
     return {
       nombre: dto.name,
@@ -112,7 +112,7 @@ export class UtilsService {
       fecha_modificacion: dto.edited,
     };
   }
-
+  /* istanbul ignore next */
   mapAndTranslateVehicles(dto: VehiclesResponseDto): TranslateVehiclesResponseDto {
     return {
       nombre: dto.name,

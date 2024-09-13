@@ -5,14 +5,11 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import helmet from 'helmet';
 import { DocumentBuilder, OpenAPIObject, SwaggerModule } from '@nestjs/swagger';
-import { ExceptionsFilter } from '@tresdoce-nestjs-toolkit/paas';
-import { otelProvider } from '@tresdoce-nestjs-toolkit/tracing';
+import { ExceptionsFilter } from '@tresdoce-nestjs-toolkit/filters';
 
 import { AppModule } from './app.module';
-import { config } from './config';
 
 async function bootstrap(): Promise<void> {
-  otelProvider(config().tracing);
   const app = await NestFactory.create(AppModule, {
     logger: new Logger(),
   });

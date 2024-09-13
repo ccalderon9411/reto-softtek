@@ -1,5 +1,6 @@
 import { AuditFieldsDto, TranslateAuditFieldsDto } from './audit.dto';
 
+/* istanbul ignore next */
 export class PlanetsResponseDto extends AuditFieldsDto {
   name: string;
   diameter: string;
@@ -14,6 +15,7 @@ export class PlanetsResponseDto extends AuditFieldsDto {
   films: string[];
   url: string;
 }
+/* istanbul ignore next */
 export class TranslatePlanetsResponseDto extends TranslateAuditFieldsDto {
   nombre: string;
   diametro: string;

@@ -4,7 +4,7 @@
   "sourceRoot": "src",
   "compilerOptions": {
     "plugins": ["@nestjs/swagger"],
-    "webpack": true,
+    "webpack": false,
     "webpackConfigPath": "./node_modules/@tresdoce-nestjs-toolkit/commons/dist-src/build-config/webpack.config.js"
   }
 }

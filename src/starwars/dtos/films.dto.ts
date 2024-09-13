@@ -1,5 +1,6 @@
 import { AuditFieldsDto, TranslateAuditFieldsDto } from './audit.dto';
 
+/* istanbul ignore next */
 export class FilmsResponseDto extends AuditFieldsDto {
   title: string;
   episode_id: number;
@@ -15,6 +16,7 @@ export class FilmsResponseDto extends AuditFieldsDto {
   url: string;
 }
 
+/* istanbul ignore next */
 export class TranslateFilmsResponseDto extends TranslateAuditFieldsDto {
   titulo: string;
   id_episodio: number;

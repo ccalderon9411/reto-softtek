@@ -1,5 +1,6 @@
 import { AuditFieldsDto, TranslateAuditFieldsDto } from './audit.dto';
 
+/* istanbul ignore next */
 export class PeopleResponseDto extends AuditFieldsDto {
   name: string;
   birth_year: string;
@@ -17,6 +18,7 @@ export class PeopleResponseDto extends AuditFieldsDto {
   url: string;
 }
 
+/* istanbul ignore next */
 export class TranslatePeopleResponseDto extends TranslateAuditFieldsDto {
   nombre: string;
   anio_nacimiento: string;

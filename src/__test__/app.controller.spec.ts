@@ -1,7 +1,6 @@
 import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule } from '@nestjs/config';
-import { FormatService } from '@tresdoce-nestjs-toolkit/paas';
 import { HttpClientModule } from '@tresdoce-nestjs-toolkit/http-client';
 
 import { AppController } from '../app.controller';
@@ -29,7 +28,7 @@ describe('AppController', () => {
         HttpClientModule,
       ],
       controllers: [AppController],
-      providers: [AppService, FormatService],
+      providers: [AppService],
     }).compile();
 
     app = moduleRef.createNestApplication();

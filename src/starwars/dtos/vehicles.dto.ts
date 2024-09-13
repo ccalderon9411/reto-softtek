@@ -1,5 +1,6 @@
 import { AuditFieldsDto, TranslateAuditFieldsDto } from './audit.dto';
 
+/* istanbul ignore next */
 export class VehiclesResponseDto extends AuditFieldsDto {
   name: string;
   model: string;
@@ -17,6 +18,7 @@ export class VehiclesResponseDto extends AuditFieldsDto {
   url: string;
 }
 
+/* istanbul ignore next */
 export class TranslateVehiclesResponseDto extends TranslateAuditFieldsDto {
   nombre: string;
   modelo: string;

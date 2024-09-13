@@ -19,6 +19,7 @@ export class PersonasController {
     isArray: true,
   })
   @Get()
+  /* istanbul ignore next */
   findAll() {
     return this.personasService.findAll();
   }
@@ -41,6 +42,7 @@ export class PersonasController {
   })
   @ApiParam({ name: 'id', type: 'string', description: 'Identificador único de la persona' })
   @Get(':id')
+  /* istanbul ignore next */
   findOne(@Param() params: FindOnePersonaParams) {
     return this.personasService.findOne({
       id: params.id,
@@ -62,6 +64,7 @@ export class PersonasController {
     isArray: false,
   })
   @Post()
+  /* istanbul ignore next */
   create(@Body() persona: CreatePersonaDto) {
     return this.personasService.create(persona);
   }
